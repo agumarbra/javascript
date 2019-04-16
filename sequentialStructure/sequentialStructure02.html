@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure02</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var base=parseInt(prompt("Escribe la base del rectangulo: "));
+            var altura=parseInt(prompt("Escribe la altura del rectangulo: "));
+            $("#outputbaseAltura").html("La base y la altura que ha introducido para su rectangulo: " + base + ", " + altura);
+            var perimetro=(2*base)+(2*altura);
+            var area=base*altura;
+            $("#outputPerimetro").html("El perimetro es: " + perimetro);
+            $("#outputArea").html("El area es: " + area);
+        });
+    </script>
+</head>
+<body>
+    <p id="outputbaseAltura"></p>
+    <p id="outputPerimetro"></p>
+    <p id="outputArea"></p>
+</body>
+</html>

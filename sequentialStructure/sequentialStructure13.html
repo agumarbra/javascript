@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var numb=parseInt(prompt("Introduzca un numero: "));
+            var r2=numb*numb;
+            var r3=numb*numb*numb;
+            $("#inputRaiz").html("Su numero es: " + numb);
+            $("#outputRaiz").html("La raiz cuadrada es: " + r2 + ". Y la raiz cubica es: " + r3);
+        });
+    </script>
+</head>
+<body>
+    <p id="inputRaiz"></p>
+    <p id="outputRaiz"></p>
+</body>
+</html>

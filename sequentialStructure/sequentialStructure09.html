@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure09</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var nCompras=parseInt(prompt("Introducir el numero de compras a realizar: "));
+            var n=0;
+            var precioTotal=0;
+            while (n<nCompras){
+                var precio=parseInt(prompt("Introducir precio compra " + (n+1) + ": "));
+                var precioTotal=precioTotal+precio;
+                var n=n+1;
+            }
+            var desc=(precioTotal*15)/100;
+            var total=precioTotal-desc;
+            $("#outputDescuento").html("El descuento es: " + desc + "€. Por tanto pagara: " + total + "€");
+        });
+    </script>
+</head>
+<body>
+    <p id="outputDescuento"></p>
+</body>
+</html>

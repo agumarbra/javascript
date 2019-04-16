@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mon2=parseInt(prompt("Cantidad de monedas de 2€"));
+            var mon1=parseInt(prompt("Cantidad de monedas de 1€"));
+            var mon50=parseInt(prompt("Cantidad de monedas de 0,50€"));
+            var mon20=parseInt(prompt("Cantidad de monedas de 0,20€"));
+            var total=mon2*2+mon1+mon50*0.5+mon20*0.2;
+            $("#inputDin").html("Tiene "+mon2+" monedas de 2€, "+mon1+" monedas de 1€, "+mon50+" monedas de 0,50€ y "+mon20+" monedas de 0,20€.");
+            $("#outputDin").html("Su dinero total de: "+total+" €");
+        });
+    </script>
+</head>
+<body>
+    <p id="inputDin"></p>
+    <p id="outputDin"></p>
+</body>
+</html>

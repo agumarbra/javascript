@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure15</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a=prompt("Introduzca el valor de a: ");
+            var b=prompt("Introduzca el valor de b: ");
+            $("#outputEntrada").html("Los valores de entrada para a y b son: " + a +", "+ b+ " respectivamente");
+            var c=a;
+            var a=b;
+            var b=c;
+            $("#outputTrans").html("Ahora el numero a vale: " + a + ". Y el numero b vale: " + b);
+        });
+    </script>
+</head>
+<body>
+    <p id="outputEntrada"></p>
+    <p id="outputTrans"></p>
+</body>
+</html>

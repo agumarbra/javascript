@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sequentialStructure19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var corr=parseFloat(prompt("¿Cuantas preguntas ha tenido bien?"));
+            var mal=parseFloat(prompt("¿Cuantas preguntas ha tenido mal?"));
+            var nc=parseFloat(prompt("¿Cuantas preguntas no ha contestado?"));
+            var nota=(corr*5)+(mal*-1)+(nc*0);      
+            $("#outputNota").html("Ha tenido "+corr+ " preguntas bien sumando "+(corr*5)+" puntos y ha tenido "+mal+" preguntas mal restando "+(Math.abs(mal*-1))+" puntos, ha dejado sin contestar "+nc+" preguntas. Por tanto su nota es: "+nota);
+        });
+    </script>
+</head>
+<body>
+    <p id="outputNota"></p>
+</body>
+</html>
