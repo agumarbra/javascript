@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure18</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var d = parseInt(prompt("Introduzca un numero entre 1 y 7"));
+            if (d >= 1 && d <= 7) {
+                if (d==1) {
+                        $("#output").html("El dia introducido es lunes");
+                }
+                else if (d==2) {
+                        $("#output").html("El dia introducido es martes");
+                }
+                else if (d==3) {
+                        $("#output").html("El dia introducido es miercoles");
+                }
+                else if (d==4) {
+                        $("#output").html("El dia introducido es jueves");
+                }
+                else if (d==5) {
+                        $("#output").html("El dia introducido es viernes");
+                }
+                else if (d==6) {
+                        $("#output").html("El dia introducido es sabado");
+                }
+                else if (d==7) {
+                        $("#output").html("El dia introducido es domingo");
+                }
+            }
+            else {
+                $("#output").html("Introduzca un numero entre 1 y 7");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realiza un programa que pida el día de la semana (del 1 al 7) y escriba el día correspondiente. Si introducimos otro número nos da un error.</p>
+    <p id="output"></p>
+</body>
+
+</html>

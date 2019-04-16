@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var a = prompt("Introduce un lado del triangulo");
+            var b = prompt("Introduce otro lado del triangulo");
+            var c = prompt("Introduce otro lado del triangulo");
+            var a2 = Math.pow(a, 2);
+            var b2 = Math.pow(b, 2);
+            var c2 = Math.pow(c, 2);
+            if (a2 == (b2 + c2)||b2 == (a2 + c2)||c2 == (b2 + a2)){
+                if ((a == b && b == c)){
+                    $("#output").html("Triangulo equilátero y rectangulo");
+                }
+                else if ((a != b && a != c && b != c)){
+                    $("#output").html("Triangulo escaleno y rectangulo");
+                }
+                else if ((a == b && b != c)||(a == c && a != b)||(c == b && a != c)){
+                    $("#output").html("Triangulo isosceles y rectangulo");
+                }
+            }
+            else{
+                if ((a == b && b == c)){
+                    $("#output").html("Triangulo equilátero");
+                }
+                else if ((a != b && a != c && b != c)){
+                    $("#output").html("Triangulo escaleno");
+                }
+                else if ((a == b && b != c)||(a == c && a != b)||(c == b && a != c)){
+                    $("#output").html("Triangulo isosceles");
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>Programa que lea 3 datos de entrada A, B y C. Estos corresponden a las dimensiones de los lados de un triángulo.
+        El programa debe determinar qué tipo de triangulo es teniendo en cuenta los siguiente: Si se cumple Pitágoras
+        entonces es triángulo rectángulo, Si sólo dos lados del triángulo son iguales entonces es isósceles., Si los 3
+        lados son iguales entonces es equilátero., Si no se cumple ninguna de las condiciones anteriores, es escaleno.
+    </p>
+    <p id="output"></p>
+</body>
+
+</html>

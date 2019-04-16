@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var m=prompt("Introduzca un numero del 1 al 12");
+            if (m >= 1 && m <= 12) {
+                if (m==1) {
+                        $("#output").html("El mes es Enero y tiene 31 dias");
+                }
+                else if (m==2) {
+                        $("#output").html("El mes es Febrero y tiene 28 (o 29) dias");
+                }
+                else if (m==3) {
+                        $("#output").html("El mes es Marzo y tiene 31 dias");
+                }
+                else if (m==4) {
+                        $("#output").html("El mes es Abril y tiene 30 dias");
+                }
+                else if (m==5) {
+                        $("#output").html("El mes es Mayo y tiene 31 dias");
+                }
+                else if (m==6) {
+                        $("#output").html("El mes es Junio y tiene 30 dias");
+                }
+                else if (m==7) {
+                        $("#output").html("El mes es Julio y tiene 31 dias");
+                }
+                else if (m==8) {
+                        $("#output").html("El mes es Agosto y tiene 31 dias");
+                }
+                else if (m==9) {
+                        $("#output").html("El mes es Septiembre y tiene 30 dias");
+                }
+                else if (m==10) {
+                        $("#output").html("El mes es Octubre y tiene 31 dias");
+                }
+                else if (m==11) {
+                        $("#output").html("El mes es Noviembre y tiene 30 dias");
+                }
+                else if (m==12) {
+                        $("#output").html("El mes es Diciembre y tiene 31 dias");
+                }
+            }
+            else {
+                $("#output").html("Introduzca un numero entre 1 y 12");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>Escribe un programa que pida un número entero entre uno y doce e imprima el número de días que tiene el mes correspondiente.</p>
+    <p id="output"></p>
+</body>
+
+</html>

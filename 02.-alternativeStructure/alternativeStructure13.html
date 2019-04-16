@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var d=prompt("Introduzca dia");
+            var m=prompt("Introduzca mes");
+            var a=prompt("Introduzca año");
+            if (a%4==0 && (a%100!=0 || a%400==0))
+            {
+                if(m==1||m==3||m==5||m==7||m==8||m==10||m==12){
+                    if(d>=1 && d<=31){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+                else if(m==2){
+                    if(d>=1 && d<=29){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+                else{
+                    if(d>=1 && d<=30){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+            }
+            else
+            {
+                if(m==1||m==3||m==5||m==7||m==8||m==10||m==12){
+                    if(d>=1 && d<=31){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+                else if(m==2){
+                    if(d>=1 && d<=28){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+                else{
+                    if(d>=1 && d<=30){
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es correcta");
+                    }
+                    else{
+                        $("#output").html("La fecha "+d+"/"+m+"/"+a+" es incorrecta");
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>Escribe un programa que pida una fecha (día, mes y año) y diga si es correcta.</p>
+    <p id="output"></p>
+</body>
+
+</html>

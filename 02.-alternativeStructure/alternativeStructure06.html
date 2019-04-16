@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cad=prompt("Introduzca una letra (mayuscula o minuscula)");
+            var cad2=cad.toUpperCase();
+            if (cad===cad2)
+            {
+                $("#output").html(cad+" es mayuscula");
+            }
+            else
+            {
+                $("#output").html(cad+" es minuscula");
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Programa que lea una cadena por teclado y compruebe si es una letra mayúscula.</p>
+    <p id="output"></p>
+</body>
+</html>

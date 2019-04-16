@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure07</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var bas=parseInt(prompt("Introduzca la base de la potencia"));
+            var exp=parseInt(prompt("Introduzca exponente de la potencia"));
+            var pot=Math.pow(bas, exp);
+            if (exp>0)
+            {
+                $("#output").html("La potencia de "+bas+" elevado a "+exp+" es igual a: "+pot);
+            }
+            else if (exp<0)
+            {
+                $("#output").html("La potencia de "+bas+" elevado a "+exp+" es igual a: 1/"+bas+"^"+(Math.abs(exp))+"="+pot);
+            }
+            else
+            {
+                $("#output").html("La potencia de "+bas+" elevado a "+exp+" es igual a: "+pot);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Realiza un algoritmo que calcule la potencia, para ello pide por teclado la base y el exponente. Pueden ocurrir tres cosas: El exponente sea positivo. El exponente sea 0, el resultado es 1. El exponente sea negativo, el resultado es 1/potencia con el exponente positivo.</p>
+    <p id="output"></p>
+</body>
+</html>

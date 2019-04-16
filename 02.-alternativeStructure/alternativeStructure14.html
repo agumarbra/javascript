@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure14</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var ku=parseFloat(prompt("Coste del kilo de uva"));
+            var tp=prompt("Tipo de la uva (A/B)");
+            var tm=parseInt(prompt("Tamaño de la uva (1/2)"));
+            var tot;
+            if (tp=="a"||tp=="A"){
+                if (tm==1){
+                    tot=ku+0.2;
+                    $("#output").html("Al ser la uva de tipo "+tp+" y de tamaño "+tm+" su precio es "+tot+ " €");
+                }
+                else if (tm==2){
+                    tot=ku+0.3;
+                    $("#output").html("Al ser la uva de tipo "+tp+" y de tamaño "+tm+" su precio es "+tot+ " €");
+                }
+                else{
+                    $("#output").html("Introduzca un tamaño correcto");
+                }
+            }
+            else if(tp=="b"||tp=="B"){
+                if (tm==1){
+                    tot=ku+0.3;
+                    $("#output").html("Al ser la uva de tipo "+tp+" y de tamaño "+tm+" su precio es "+tot+ " €");
+                }
+                else if (tm==2){
+                    tot=ku+0.5;
+                    $("#output").html("Al ser la uva de tipo "+tp+" y de tamaño "+tm+" su precio es "+tot+ " €");
+                }
+                else{
+                    $("#output").html("Introduzca un tamaño correcto");
+                }
+            }
+            else {
+                $("#output").html("Introduzca un tipo correcto");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>La asociación de vinicultores tiene como política fijar un precio inicial al kilo de uva, la cual se clasifica en tipos A y B, y además en tamaños 1 y 2. Cuando se realiza la venta del producto, ésta es de un solo tipo y tamaño, se requiere determinar cuánto recibirá un productor por la uva que entrega en un embarque, considerando lo siguiente: si es de tipo A, se le cargan 20 céntimos al precio inicial cuando es de tamaño 1; y 30 céntimos si es de tamaño 2. Si es de tipo B, se rebajan 30 céntimos cuando es de tamaño 1, y 50 céntimos cuando es de tamaño 2. Realice un algoritmo para determinar la ganancia obtenida.</p>
+    <p id="output"></p>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure09</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var num1 = parseInt(prompt("Introduce un primer numero"));
+            var num2 = parseInt(prompt("Introduce un segundo numero"));
+            var num3 = parseInt(prompt("Introduce un tercer numero"));
+            if (num1<num2){
+                var numE=num1;
+                var num1=num2;
+                var num2=numE;
+            }
+            if(num2<num3){
+                var numE=num2;
+                var num2=num3;
+                var num3=numE;
+            }
+            if (num1<num2){
+                var numE=num1;
+                var num1=num2;
+                var num2=numE;
+            }
+            $("#output").html("Los numeros ordenados de mayor a menor son: " + num1 + " > " + num2 + " > " + num3);
+        });
+    </script>
+</head>
+
+<body>
+    <p>Algoritmo que pida tres números y los muestre ordenados (de mayor a menor).</p>
+    <p id="output"></p>
+</body>
+
+</html>

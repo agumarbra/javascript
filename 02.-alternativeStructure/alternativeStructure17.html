@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alternativeStructure17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var num = parseInt(prompt("Introduzca un numero del dado"));
+            if (num >= 1 && num <= 6) {
+                if (num==1) {
+                        $("#output").html("La cara opuesta de "+num+" es seis");
+                }
+                else if (num==2) {
+                        $("#output").html("La cara opuesta de "+num+" es cinco");
+                }
+                else if (num==3) {
+                        $("#output").html("La cara opuesta de "+num+" es cuatro");
+                }
+                else if (num==4) {
+                        $("#output").html("La cara opuesta de "+num+" es tres");
+                }
+                else if (num==5) {
+                        $("#output").html("La cara opuesta de "+num+" es dos");
+                }
+                else if (num==6) {
+                        $("#output").html("La cara opuesta de "+num+" es uno");
+                }
+            }
+            else {
+                $("#output").html("ERROR: número incorrecto.");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realiza un programa que pida por teclado el resultado (dato entero) obtenido al lanzar un dado de seis caras y
+        muestre por pantalla el número en letras (dato cadena) de la cara opuesta al resultado obtenido.
+        Nota 1: En las caras opuestas de un dado de seis caras están los números: 1-6, 2-5 y 3-4.
+        Nota 2: Si el número del dado introducido es menor que 1 o mayor que 6, se mostrará el mensaje: “ERROR: número
+        incorrecto.”.</p>
+    <p id="output"></p>
+</body>
+
+</html>
