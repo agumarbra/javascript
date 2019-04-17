@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure04</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var num=parseInt(prompt("¿Cuántos números vas a introducir?"));
+            var h=0;
+            var f=0;
+            var g=0;
+            for (var i=1; i<=num; i++)
+            {
+                var ni=prompt("Escriba un número");
+                if (ni>0)
+                {
+                    h++;
+                }
+                else if (ni<0)
+                {
+                    f++;
+                }
+                else if (ni==0)
+                {
+                    g++;
+                }
+            }
+            $("#output").html("Los numeros introducidos mayores, menores e iguales que cero son: "+h+", "+f+", "+g+" respectivamente");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realizar un algoritmo que pida números (se pedirá por teclado la cantidad de
+            números a introducir). El programa debe informar de cuantos números
+            introducidos son mayores que 0, menores que 0 e iguales a 0.</p>
+    <p id="output"></p>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure07</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var n1=prompt("Introduzca un numero");
+            var i=0;
+            $("#output").html("La tabla del numero "+n1+" es:<br/>")
+            while (i!=11)
+            {
+                var n2=n1*i;
+                $("#output").append(n1+"*"+i+"="+n2+"<br/>");
+                i++;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realizar un algoritmo que muestre la tabla de multiplicar de un número
+            introducido por teclado.</p>
+    <p id="output"></p>
+</body>
+
+</html>

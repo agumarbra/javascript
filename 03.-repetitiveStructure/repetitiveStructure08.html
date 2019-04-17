@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure08</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var imn=prompt("Limite inferior");
+            var imx=prompt("Limite superior");
+            while (imn>imx||imn==imx)
+            {
+                imn=prompt("Limite inferior mas pequeño que el superior");
+                imx=prompt("Limite superior mas grande que el inferior");
+            }
+            var n=parseInt(prompt("Introduza un numero"));
+            var i=0;
+            var f=0;
+            var sum=0;
+            while (n!=0)
+            {
+                
+                if (n>=imn && n<=imx)
+                {
+                    if(n==imx || n==imn)
+                    {
+                        sum=sum+n;
+                        i++;
+                    }
+                    else
+                    {
+                        sum=sum+n;
+                    }
+                }
+                else
+                {
+                    f++;
+                }
+                n=parseInt(prompt("Introduza un numero"));    
+            }
+            $("#output").html("La suma de los numeros dentro del rango es "+sum+", ha introducido "+i+" veces el mismo numero que los extremos y ha introducido "+f+" veces numeros fuera del rango.");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Escribe un programa que pida el límite inferior y superior de un intervalo. Si el
+            límite inferior es mayor que el superior lo tiene que volver a pedir.
+            A continuación se van introduciendo números hasta que introduzcamos el 0.
+            Cuando termine el programa dará las siguientes informaciones:
+            La suma de los números que están dentro del intervalo (intervalo abierto).
+            Cuantos números están fuera del intervalo.
+            He informa si hemos introducido algún número igual a los límites del
+            intervalo.</p>
+    <p id="output"></p>
+</body>
+
+</html>
