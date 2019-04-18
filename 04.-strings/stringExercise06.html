@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>stringExercise06</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var str=prompt("Introduzca una cadena");
+            var strRev ="";
+            var i=0;
+            while(i<str.length){
+                strRev = str[i]+strRev;
+                i++;
+            }  
+            $("#output").html("La cadena introducida es '"+str+"'. Su cadena invertida es '"+strRev+"'.");          
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realizar un programa que dada una cadena de caracteres por caracteres,
+            genere otra cadena resultado de invertir la primera.</p>
+    <p id="output"></p>
+</body>
+
+</html>

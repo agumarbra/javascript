@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>stringExercise10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var str=prompt("Introduzca una cadena");
+            var strRev ="";
+            var i=0;
+            while(i<str.length){
+                strRev = str[i]+strRev;
+                i++;
+            }
+            var i=0;
+            while(i<str.length){
+                if(str===strRev){
+                    $("#output").html("La cadena '"+str+"' es un palindromo");
+                }
+                else{
+                    $("#output").html("La cadena '"+str+"' NO es un palindromo");
+                }
+                i++;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p>Introducir una cadena de caracteres e indicar si es un palíndromo. Una palabra
+            palíndroma es aquella que se lee igual adelante que atrás.</p>
+    <p id="output"></p>
+</body>
+
+</html>

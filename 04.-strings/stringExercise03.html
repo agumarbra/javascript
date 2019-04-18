@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>stringExercise03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var primera = prompt("Primera cadena");
+            var segunda = prompt("Introduza un solo caracter");
+
+            while (segunda.length != 1) {
+                var segunda = prompt("Introduza un solo caracter");
+            }
+            var i = 0;
+            var f = 0;
+            while (i <= primera.length) {
+                if (segunda == primera[i]) {
+                    f++;
+                }
+                i++;
+            }
+            $("#output").html("El caracter '" + segunda + "' se repite " +f+ " veces en '"+primera+"'");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Pide una cadena y un carácter por teclado (valida que sea un carácter) y
+        muestra cuantas veces aparece el carácter en la cadena.</p>
+    <p id="output"></p>
+</body>
+
+</html>

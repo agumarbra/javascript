@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>stringExercise07</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var str=prompt("Introduzca una cadena");
+            var str2=[];
+            str2=str.split("");
+            var a=prompt("Caracter a sustituir");
+            while (a.length != 1) {
+                var a = prompt("Caracter a sustituir (un solo caracter)");
+            }
+            var b=prompt("Caracter que sustituye");
+            while (b.length != 1) {
+                var b = prompt("Caracter que sustituye (un solo caracter)");
+            }
+            var i = 0;
+            var f=0;
+            while (i <= str2.length) {
+                if (a === str2[i]) {
+                    str2[i]=b;
+                }
+                i++;
+            }
+            var str3=str2.join("");
+            $("#output").html("La cadena introducida es '"+str+"'. Su cadena invertida es '"+str3+"'.");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Pide una cadena y dos caracteres por teclado (valida que sea un carácter),
+            sustituye la aparición del primer carácter en la cadena por el segundo carácter.</p>
+    <p id="output"></p>
+</body>
+
+</html>
