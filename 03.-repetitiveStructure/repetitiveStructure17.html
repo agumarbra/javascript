@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var emp=parseInt(prompt("Numero de empleados"));
+            var pag=parseInt(prompt("Cuanto se paga la hora"));
+            var i=1;
+            var sum=0;
+            while (i<=emp)
+            {
+                var h=parseInt(prompt("Numero de horas semanales del empleado "+i));
+                var tot=h*pag;
+                var sum=sum+tot;
+                $("#output").append("El empleado "+i+" trabaja "+h+" horas y recibe un pago de "+tot+"€<br/>");
+                i++;
+            }
+            $("#output").prepend("Al final paga un total de "+sum+"€<br/>");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Una empresa les paga a sus empleados con base en las horas trabajadas en la
+            semana. Para esto, se registran los días que trabajó y las horas de cada día.
+            Realice un algoritmo para determinar el sueldo semanal de N trabajadores y
+            además calcule cuánto pagó la empresa por los N empleados.</p>
+    <p id="output"></p>
+</body>
+
+</html>

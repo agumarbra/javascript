@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure14</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i=70;
+            var f=150;
+            while (i!=f)
+            {
+                i++;
+                f--;
+            }
+            $("#output").html("Se encontraran en el km "+i);
+        });
+    </script>
+</head>
+
+<body>
+    <p>Una persona se encuentra en el kilómetro 70 de una carretera, otra se encuentra
+            en el km 150, los coches tienen sentido opuesto y tienen la misma velocidad.
+            Realizar un programa para determinar en qué kilómetro de esa carretera se
+            encontrarán.</p>
+    <p id="output"></p>
+</body>
+
+</html>

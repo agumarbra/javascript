@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var n=prompt("Introduzca numero");
+            var i=2;
+            var pri=true;
+            while (i<n)
+            {
+                if(n%i==0){
+                    pri=false;
+                    $("#output").append("Es divisible por: "+i+"<br/>");
+                }
+                i++;
+            }
+            if(pri==true){
+                $("#output").prepend(n+" es primo <br/>");
+            }
+            else{
+                $("#output").prepend(n+" no es primo <br/>");
+            }            
+        });
+    </script>
+</head>
+
+<body>
+    <p>Escribe un programa que diga si un número introducido por teclado es o no
+            primo. Un número primo es aquel que sólo es divisible entre él mismo y la
+            unidad. Nota: Es suficiente probar hasta la raíz cuadrada del número para ver si
+            es divisible por algún otro número.</p>
+    <p id="output"></p>
+</body>
+
+</html>

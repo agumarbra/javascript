@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure15</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            var tot=5;
+            var sum=0;
+            while (i<=20)
+            {
+                tot=tot*2;
+                var sum=sum+tot;
+                $("#output").append("El mes "+i+" paga "+tot+"€<br/>");
+                i++;
+            }
+            $("#output").prepend("Al final paga un total de "+sum+"€<br/>");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Una persona adquirió un producto para pagar en 20 meses. El primer mes pagó
+            10 €, el segundo 20 €, el tercero 40 € y así sucesivamente. Realizar un algoritmo
+            para determinar cuánto debe pagar mensualmente y el total de
+            lo que pagó después de los 20 meses.</p>
+    <p id="output"></p>
+</body>
+
+</html>

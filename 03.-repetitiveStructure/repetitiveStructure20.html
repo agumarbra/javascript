@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure20</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var n=prompt("Introduzca numero de primos que quiere obtener");
+            var i,f;
+            var g=2;
+            var j=0;
+            for(i=1;i<=n;i++){
+                pri=false;
+                while(!pri){
+                    f=2;
+                    pri=true;
+                    while(pri && f<i){
+                        if(g%f==0){
+                            pri=false;
+                        }else{
+                            f=f+1;
+                        }
+                    }
+                    if(pri){
+                        j++;
+                        $("#output").append("El "+j+"º numero primo es "+g+"<br/>");
+                    }
+                    g++;
+                }
+            }      
+        });
+    </script>
+</head>
+
+<body>
+    <p>Mostrar en pantalla los N primero número primos. Se pide por teclado la cantidad
+            de números primos que queremos mostrar.</p>
+    <p id="output"></p>
+</body>
+
+</html>

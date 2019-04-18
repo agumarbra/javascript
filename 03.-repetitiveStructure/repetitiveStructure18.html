@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure18</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tiempo = {
+                hora: 0,
+                minuto: 0,
+                segundo: 0,
+                corriendo:0
+            };
+            tiempo.corriendo = setInterval(function () {
+                tiempo.segundo++;
+                if (tiempo.segundo >= 60) {
+                    tiempo.segundo = 0;
+                    tiempo.minuto++;
+                }
+                if (tiempo.minuto >= 60) {
+                    tiempo.minuto = 0;
+                    tiempo.hora++;
+                }
+                $("#hora").text(tiempo.hora < 10 ? '0' + tiempo.hora : tiempo.hora);
+                $("#minuto").text(tiempo.minuto < 10 ? '0' + tiempo.minuto : tiempo.minuto);
+                $("#segundo").text(tiempo.segundo < 10 ? '0' + tiempo.segundo : tiempo.segundo);
+            }, 1000);
+        });
+    </script>
+    <style>
+    .contenedor{
+        display:flex;
+        flex-direction: row;
+    }
+    </style>
+</head>
+
+<body>
+    <p>Hacer un programa que muestre un cronometro, indicando las horas, minutos y
+        segundos.</p>
+    <p>Adaptado de un ejercicio encontrado en internet</p>
+    <p id="output"></p>
+    <div id="cronometro">
+        <div class="contenedor">
+            <div id="hora">00</div>
+            <div class="divisor">:</div>
+            <div id="minuto">00</div>
+            <div class="divisor">:</div>
+            <div id="segundo">00</div>
+        </div>
+    </div>
+</body>
+
+</html>

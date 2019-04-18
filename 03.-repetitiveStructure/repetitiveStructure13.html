@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            var tot=0;
+            var sal=parseInt(prompt("Cuanto se paga la hora trabajada"));
+            while (i<=6)
+            {
+                var n=parseInt(prompt("Horas trabajadas el dia "+i));
+                var tot=tot+n;
+                $("#output").append("Las horas trabajadas el dia "+i+" son "+n+". En total son: "+tot+" horas<br/>");
+                i++;
+            }
+            var gana=tot*sal;
+            $("#output").prepend("Las horas trabajadas esta semana son: "+tot+" horas, ganando un total de "+gana+"€<br/>");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Una empresa tiene el registro de las horas que trabaja diariamente un empleado
+            durante la semana (seis días) y requiere determinar el total de éstas, así como el
+            sueldo que recibirá por las horas trabajadas.</p>
+    <p id="output"></p>
+</body>
+
+</html>

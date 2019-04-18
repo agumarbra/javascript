@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>repetitiveStructure12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            var tot=0;
+
+            while (i<=12)
+            {
+                var n=parseInt(prompt("Ahorro del mes: "+i));
+                var tot=tot+n;
+                $("#output").append("El ahorro del mes "+i+" es de "+n+"€ el ahorro total es: "+tot+"€<br/>");
+                i++;
+            }
+            $("#output").prepend("El ahorro total al final del año es de: "+tot+"€<br/>");
+        });
+    </script>
+</head>
+
+<body>
+    <p>Realizar un algoritmo para determinar cuánto ahorrará una persona en un año, si
+            al final de cada mes deposita cantidades variables de dinero; además, se quiere
+            saber cuánto lleva ahorrado cada mes.</p>
+    <p id="output"></p>
+</body>
+
+</html>
